@@ -1,8 +1,8 @@
-#include "Fraction.h"
+п»ї#include "Fraction.h"
 
 Fraction::Fraction(int chislitel, int znamenatel) {
 
-	if (znamenatel == 0) throw std::exception("знаменатель не должен быть равен нулю!!!");
+	if (znamenatel == 0) throw std::exception("Р·РЅР°РјРµРЅР°С‚РµР»СЊ РЅРµ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ СЂР°РІРµРЅ РЅСѓР»СЋ!!!");
 
 	this->chislitel = chislitel;
 	this->znamenatel = znamenatel;
@@ -11,9 +11,9 @@ Fraction::Fraction(int chislitel, int znamenatel) {
 Fraction::Fraction(double x)
 {
 	std::string str = std::to_string(x);
-	std::string str1; // строка для хранения значения числителя
-	int y = 1; // знаменатель
-	bool val = false; // проверка на наличие точки
+	std::string str1; // СЃС‚СЂРѕРєР° РґР»СЏ С…СЂР°РЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ С‡РёСЃР»РёС‚РµР»СЏ
+	int y = 1; // Р·РЅР°РјРµРЅР°С‚РµР»СЊ
+	bool val = false; // РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ С‚РѕС‡РєРё
 
 	for (int i = 0; i < str.length(); i++)
 	{
@@ -39,7 +39,7 @@ void Fraction::set_chislitel(int chislitel)
 
 void Fraction::set_znamtnatel(int znamenatel)
 {
-	if (znamenatel == 0) throw std::exception("знаменатель не должен быть равен нулю!!!"); 
+	if (znamenatel == 0) throw std::exception("Р·РЅР°РјРµРЅР°С‚РµР»СЊ РЅРµ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ СЂР°РІРµРЅ РЅСѓР»СЋ!!!"); 
 	this->znamenatel = znamenatel;
 }
 
@@ -142,9 +142,9 @@ Fraction& Fraction::operator=(const Fraction& other)
 Fraction& Fraction::operator=(const double x)
 {
 	std::string str = std::to_string(x);
-	std::string str1; // строка для хранения значения числителя
-	int y = 1; // знаменатель
-	bool val = false; // проверка на наличие точки
+	std::string str1; // СЃС‚СЂРѕРєР° РґР»СЏ С…СЂР°РЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ С‡РёСЃР»РёС‚РµР»СЏ
+	int y = 1; // Р·РЅР°РјРµРЅР°С‚РµР»СЊ
+	bool val = false; // РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ С‚РѕС‡РєРё
 
 	for (int i = 0; i < str.length(); i++)
 	{
@@ -290,9 +290,11 @@ std::ostream& operator<<(std::ostream& ost, const Fraction& f)
 	return ost;
 }
 
-std::istream& operator>>(std::istream& ist, const Fraction& f)
+std::istream& operator>>(std::istream& ist, Fraction& f)
 {
-	ist >> f.chislitel >> f.znamenatel;
-	if (f.znamenatel == 0) throw std::exception("знаменатель не должен быть равен нулю!!!");
+	int x, y;
+	ist >> x >> y;
+	f.set_chislitel(x);
+	f.set_znamtnatel(y);
 	return ist;
 }

@@ -2,6 +2,7 @@
 
 int main()
 {
+	system("chcp 1251 > 0");
 	Fraction f = 0.5;
 	f.show_simple_fraction();
 	f.show_decimal();
@@ -12,6 +13,11 @@ int main()
 	std::cout << f << "\n";
 
 	std::cout << double(f) + 0.4 << "\n";
+	Fraction f2;
+	std::cout << "Введите числитель, а затем знаменатель дроби :\n";
+	std::cin >> f2;
+	std::cout << f2 << "\n";
+	f2.show_simple_fraction();
 }
 
 

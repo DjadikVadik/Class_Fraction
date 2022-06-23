@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #ifndef FRACTION123
 #define FRACTION123
 
@@ -16,41 +16,41 @@ public:
 	Fraction(int chislitel, int znamenatel);
 	Fraction(double x);
 
-	void set_chislitel(int chislitel); // сеттер числителя
-	void set_znamtnatel(int znamenatel); // сеттер знаменателя
+	void set_chislitel(int chislitel); // СЃРµС‚С‚РµСЂ С‡РёСЃР»РёС‚РµР»СЏ
+	void set_znamtnatel(int znamenatel); // СЃРµС‚С‚РµСЂ Р·РЅР°РјРµРЅР°С‚РµР»СЏ
 
-	int get_chislitel();  // геттер числителя
-	int get_znamenatel();  //геттер знаменателя
+	int get_chislitel();  // РіРµС‚С‚РµСЂ С‡РёСЃР»РёС‚РµР»СЏ
+	int get_znamenatel();  //РіРµС‚С‚РµСЂ Р·РЅР°РјРµРЅР°С‚РµР»СЏ
 
-	void show_simple_fraction(); // вывод на экран простой дроби
-	void show_decimal();  // вывод на экран десятичной дроби
-	double get_decimal(); // вернуть в качестве результата десятичную дробь
-	void fraction_reduction(); // сокращение простой дроби
+	void show_simple_fraction(); // РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ РїСЂРѕСЃС‚РѕР№ РґСЂРѕР±Рё
+	void show_decimal();  // РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ РґРµСЃСЏС‚РёС‡РЅРѕР№ РґСЂРѕР±Рё
+	double get_decimal(); // РІРµСЂРЅСѓС‚СЊ РІ РєР°С‡РµСЃС‚РІРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° РґРµСЃСЏС‚РёС‡РЅСѓСЋ РґСЂРѕР±СЊ
+	void fraction_reduction(); // СЃРѕРєСЂР°С‰РµРЅРёРµ РїСЂРѕСЃС‚РѕР№ РґСЂРѕР±Рё
 
-	bool operator < (const Fraction& other);  // перегрузка оператора <
-	bool operator > (const Fraction& other);  // перегрузка оператора >
-	bool operator == (const Fraction& other);   // перегрузка оператора ==
-	bool operator != (const Fraction& other);   // перегрузка оператора !=
+	bool operator < (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° <
+	bool operator > (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° >
+	bool operator == (const Fraction& other);   // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° ==
+	bool operator != (const Fraction& other);   // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° !=
 
-	Fraction& operator = (const Fraction& other);  // перегрузка оператора =
-	Fraction& operator = (const double x);  // перегрузка оператора = для double
+	Fraction& operator = (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° =
+	Fraction& operator = (const double x);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° = РґР»СЏ double
 
-	Fraction operator + (const Fraction& other);  // перегрузка оператора +
-	Fraction& operator += (const Fraction& other);  // перегрузка оператора +=
+	Fraction operator + (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° +
+	Fraction& operator += (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° +=
 
-	Fraction operator - (const Fraction& other);  // перегрузка оператора -
-	Fraction& operator -= (const Fraction& other);  // перегрузка оператора -=
+	Fraction operator - (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° -
+	Fraction& operator -= (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° -=
 
-	Fraction operator * (const Fraction& other);  // перегрузка оператора *
-	Fraction& operator *= (const Fraction& other);  // перегрузка оператора *=
+	Fraction operator * (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° *
+	Fraction& operator *= (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° *=
 
-	Fraction operator / (const Fraction& other);  // перегрузка оператора /
-	Fraction& operator /= (const Fraction& other);  // перегрузка оператора /=
+	Fraction operator / (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° /
+	Fraction& operator /= (const Fraction& other);  // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° /=
 
-	operator double(); // приведение типа к double
+	operator double(); // РїСЂРёРІРµРґРµРЅРёРµ С‚РёРїР° Рє double
 
-	friend std::ostream& operator << (std::ostream& ost, const Fraction& f); // перегрузка битового сдвига влево
-	friend std::istream& operator >> (std::istream& ost, const Fraction& f); // перегрузка битового сдвига вправо
+	friend std::ostream& operator << (std::ostream& ost, const Fraction& f); // РїРµСЂРµРіСЂСѓР·РєР° Р±РёС‚РѕРІРѕРіРѕ СЃРґРІРёРіР° РІР»РµРІРѕ
+	friend std::istream& operator >> (std::istream& ost, Fraction& f); // РїРµСЂРµРіСЂСѓР·РєР° Р±РёС‚РѕРІРѕРіРѕ СЃРґРІРёРіР° РІРїСЂР°РІРѕ
 };
 
 #endif // !FRACTION123
